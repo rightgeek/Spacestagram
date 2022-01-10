@@ -4,6 +4,9 @@
     margin: auto;
     background: #fff;
 }
+@media (max-width: 759px) {
+  max-width: 85ch;
+}
 #header {
     background: #ccc;
     padding: 20px;
