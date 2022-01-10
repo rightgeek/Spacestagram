@@ -1,6 +1,8 @@
 (function(){
   const url = 'https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&count=7';
   const container = document.querySelector('#content');
+  const templateImage = '<figure><img src="${media}" alt="${title}"><figcaption>${description}</figcaption></figure>';
+  const templateVideo = '<figure><iframe src="${media}" alt="${title}" type="text/html"></iframe><figcaption>${description}</figcaption></figure>';
 
   // const apod_img_id = document.getElementById('apod_img_id');
   // const apod_vid_id = document.getElementById('apod_vid_id');
@@ -16,7 +18,10 @@
       if (this.readyState === 4 && this.status === 200) {
         let result = JSON.parse(this.response);
 
-        console.log(result);
+        result.forEach((item, i) => {
+          console.log(item);
+        });
+
 
         // if (result.media_type === 'video') {
         //   apod_img_id.style.display = 'none';
