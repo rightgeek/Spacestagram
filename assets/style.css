@@ -43,10 +43,10 @@
     padding: 20px;
     min-height: 90vh;
 }
-#content h2 {
+#content h4 {
     color: #000;
     font-size: 160%;
-    margin: 0 0 0.5em;
+    margin: 0.5rem 0;
 }
 figure {
   margin: 0;
