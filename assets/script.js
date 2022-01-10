@@ -11,14 +11,13 @@
         let result = JSON.parse(this.response);
 
         result.forEach((item, i) => {
-          console.log(item);
           const title = item.title;
           const explanation = item.explanation;
           const mediaUrl = item.url;
           const media = (item.media_type === 'video') ? '<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>' : '<img src="${mediaUrl}" alt="${title}">';
 
           template += '<figure>${media}<figcaption>${description}</figcaption></figure>';
-
+          console.log(template);
           if (i == 6) {
             container.innerHTML = template;
           }
