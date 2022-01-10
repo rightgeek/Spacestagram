@@ -13,7 +13,7 @@ body {
   max-width: 85ch;
 }
 .loading-overlay__spinner {
-    width: 1.8rem;
+  width: 1.8rem;
 }
 .spinner {
   animation:rotator 1.4s linear infinite
