@@ -51,7 +51,8 @@ figure {
 figure + * {
   margin-top: 2rem;
 }
-img,iframe {
+img,
+iframe {
   width: 100%;
   max-width: 100%;
 }
