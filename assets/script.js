@@ -13,10 +13,11 @@
         result.forEach((item, i) => {
           const title = item.title;
           const explanation = item.explanation;
+          const date = item.date;
           const mediaUrl = item.url;
           const media = (item.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
 
-          template += `<figure>${media}<figcaption>${explanation}</figcaption></figure>`;
+          template += `<figure>${media}<figcaption><h4>${date} - ${title}</h4><p>${explanation}</p></figcaption></figure>`;
 
           if (i == 6) {
             container.innerHTML = template;
