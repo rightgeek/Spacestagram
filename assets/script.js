@@ -17,7 +17,7 @@
           const mediaUrl = item.url;
           const media = (item.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
 
-          template += `<figure>${media}<figcaption><h4>${date} - ${title}</h4><p>${explanation}</p></figcaption></figure>`;
+          template += `<figure>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
 
           if (i == 6) {
             container.innerHTML = template;
