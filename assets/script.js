@@ -20,6 +20,7 @@
 
           if (i == 6) {
             container.innerHTML = template;
+            console.log(template);
           }
         });
       }
