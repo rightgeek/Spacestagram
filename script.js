@@ -36,7 +36,7 @@
         // apod_title.innerText = result.title;
       }
     };
-    xhttp.open('GET', 'https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S', true);
+    xhttp.open('GET', url, true);
     xhttp.send();
   }
 
