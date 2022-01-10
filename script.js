@@ -1,5 +1,5 @@
 (function(){
-  const url = 'https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S';
+  const url = 'https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&count=7';
   const container = document.querySelector('#content');
 
   // const apod_img_id = document.getElementById('apod_img_id');
