@@ -45,6 +45,16 @@
     font-size: 160%;
     margin: 0 0 0.5em;
 }
+figure {
+  margin: 0;
+}
+figure + * {
+  margin-top: 2rem;
+}
+img,iframe {
+  width: 100%;
+  max-width: 100%;
+}
 #footer {
     background: #ccc;
     text-align: right;
