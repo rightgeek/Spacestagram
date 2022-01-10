@@ -30,14 +30,12 @@
     padding: 5px 10px;
     color: #fff;
     text-decoration: none;
-    border-right: 1px solid#fff;
-}
-#navigation li a:hover {
-    background: #383;
+    /* border-right: 1px solid#fff; */
 }
 #content {
     clear: left;
     padding: 20px;
+    min-height: 70vh;
 }
 #content h2 {
     color: #000;
