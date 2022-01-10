@@ -11,7 +11,7 @@
         let result = JSON.parse(this.response);
 
         result.forEach((item, i) => {
-          // console.log(item);
+          console.log(item);
           const title = item.title;
           const explanation = item.explanation;
           const mediaUrl = item.url;
