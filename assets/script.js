@@ -1,7 +1,7 @@
 (function(){
   const url = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&count=7';
   const container = document.querySelector('#content');
-  const template = '';
+  let template = '';
 
   function loadXMLDoc() {
     const xhttp = new XMLHttpRequest();
