@@ -2,7 +2,6 @@
   const urlOfTheDay = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S';
   const urlRandom7 = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&count=7';
   const container = document.querySelector('#content');
-  const container2 = document.querySelector('#randomSeven');
   let first = true;
   let template = '';
 
@@ -31,6 +30,8 @@
           }
         } else {
           template = '';
+          const container2 = document.querySelector('#randomSeven');
+          
           result.forEach((item, i) => {
             const title = item.title;
             const explanation = item.explanation;
