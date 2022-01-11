@@ -2,7 +2,7 @@
   const urlOfTheDay = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S';
   const urlRandom7 = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&count=7';
   const container = document.querySelector('#content');
-  const first;
+  let first = true;
   let template = '';
 
   function loadXMLDoc(url,first) {
@@ -24,6 +24,11 @@
 
           if (first) {
             container.innerHTML = template;
+            first = false;
+            if (!first) {
+              first = true;
+              loadXMLDoc(urlRandom7);
+            }
           } else if (i == 6) {
             container.appendChild(template);
           }
@@ -35,5 +40,4 @@
   }
 
   loadXMLDoc(urlOfTheDay,first);
-  loadXMLDoc(urlRandom7);
 })()
