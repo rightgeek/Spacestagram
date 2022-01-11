@@ -132,6 +132,12 @@ figure:first-of-type::before {
   justify-content: center;
   text-transform: uppercase;
 }
+#randomSeven figure:first-of-type {
+  padding-top: 0;
+}
+#randomSeven figure:first-of-type::before {
+  content: unset;
+}
 figcaption {
   padding: 0 1rem 0.5rem;
 }
