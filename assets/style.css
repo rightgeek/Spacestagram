@@ -112,6 +112,26 @@ figure:first-of-type::before {
   justify-content: center;
   text-transform: uppercase;
 }
+#randomSeven {
+  margin-top: 1rem;
+  padding-top: 3.5rem;
+  position: relative;
+}
+#randomSeven::before {
+  content: 'Seven random days & their pictures';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5rem;
+  font-size: .85rem;
+  right: 0;
+  background: #191919;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
 figcaption {
   padding: 0 1rem 0.5rem;
 }
