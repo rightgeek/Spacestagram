@@ -27,10 +27,10 @@
           first = false;
 
           if (!first) {
-            template = '';
             loadXMLDoc(urlRandom7);
           }
         } else {
+          template = '';
           result.forEach((item, i) => {
             const title = item.title;
             const explanation = item.explanation;
