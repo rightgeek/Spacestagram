@@ -113,7 +113,7 @@ figure:first-of-type::before {
   text-transform: uppercase;
 }
 #randomSeven {
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-top: 3.5rem;
   position: relative;
 }
