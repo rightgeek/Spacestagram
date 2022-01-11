@@ -1,9 +1,11 @@
 (function(){
-  const url = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&count=7';
+  const urlOfTheDay = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S';
+  const urlRandom7 = 'https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&count=7';
   const container = document.querySelector('#content');
+  const first;
   let template = '';
 
-  function loadXMLDoc() {
+  function loadXMLDoc(url,first) {
     const xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
@@ -16,12 +18,14 @@
           const date = item.date;
           const mediaUrl = item.url;
           const media = (item.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+          const firstClass = first ? ` style="--of-the-day: Picture of the day (${date});"` : '';
 
-          template += `<figure>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
+          template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
 
-          if (i == 6) {
+          if (first) {
             container.innerHTML = template;
-            console.log(template);
+          } else if (i == 6) {
+            container.appendChild(template);
           }
         });
       }
@@ -30,5 +34,6 @@
     xhttp.send();
   }
 
-  loadXMLDoc();
+  loadXMLDoc(urlOfTheDay,first);
+  loadXMLDoc(urlRandom7);
 })()

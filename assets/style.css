@@ -93,6 +93,18 @@ figure {
   margin: 0;
   box-shadow: 0 1px 3px 0px rgb(25 25 25 / 10%);
 }
+figure:first-of-type {
+  padding-top: 2rem;
+  position: relative;
+}
+figure:first-of-type::before {
+  content: var(--of-the-day);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+
+}
 figcaption {
   padding: 0 1rem 0.5rem;
 }
