@@ -105,7 +105,7 @@ figure:first-of-type::before {
   height: 2.5rem;
   font-size: .85rem;
   right: 0;
-  background: #191919;
+  background: #333333;
   color: #fff;
   display: flex;
   align-items: center;
@@ -125,7 +125,7 @@ figure:first-of-type::before {
   height: 2.5rem;
   font-size: .85rem;
   right: 0;
-  background: #191919;
+  background: #333333;
   color: #fff;
   display: flex;
   align-items: center;
