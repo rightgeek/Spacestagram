@@ -160,3 +160,7 @@ div.xyexample {
   font-family: monospace;
   background-color: grey;
 }
+form {
+  text-align: right;
+  margin-top: 1rem;
+}
