@@ -103,7 +103,13 @@ figure:first-of-type::before {
   top: 0;
   left: 0;
   height: 2rem;
-
+  right: 0;
+  background: #191919;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
 }
 figcaption {
   padding: 0 1rem 0.5rem;

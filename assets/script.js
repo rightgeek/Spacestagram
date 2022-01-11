@@ -18,7 +18,7 @@
           const date = item.date;
           const mediaUrl = item.url;
           const media = (item.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
-          const firstClass = first ? ` style="--of-the-day: Picture of the day (${date});"` : '';
+          const firstClass = first ? ` style="--of-the-day: 'Picture of the day (${date})';"` : '';
 
           template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
 
