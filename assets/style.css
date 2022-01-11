@@ -118,7 +118,7 @@ figure:first-of-type::before {
   position: relative;
 }
 #randomSeven::before {
-  content: 'Seven random days & their pictures';
+  content: 'Random days & their pictures';
   position: absolute;
   top: 0;
   left: 0;
