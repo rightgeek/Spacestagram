@@ -12,27 +12,36 @@
       if (this.readyState === 4 && this.status === 200) {
         let result = JSON.parse(this.response);
 
-        result.forEach((item, i) => {
-          const title = item.title;
-          const explanation = item.explanation;
-          const date = item.date;
-          const mediaUrl = item.url;
-          const media = (item.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
-          const firstClass = first ? ` style="--of-the-day: 'Picture of the day (${date})';"` : '';
+        if (first) {
+          const title = result.title;
+          const explanation = result.explanation;
+          const date = result.date;
+          const mediaUrl = result.url;
+          const media = (result.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+          const firstClass = ` style="--of-the-day: 'Picture of the day (${date})';"`;
 
           template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
 
-          if (first) {
-            container.innerHTML = template;
-            first = false;
-            if (!first) {
-              first = true;
-              loadXMLDoc(urlRandom7);
-            }
-          } else if (i == 6) {
-            container.appendChild(template);
+          container.innerHTML = template;
+          first = false;
+
+          if (!first) {
+            first = true;
+            loadXMLDoc(urlRandom7);
           }
-        });
+        } else {
+          result.forEach((item, i) => {
+            const title = item.title;
+            const explanation = item.explanation;
+            const date = item.date;
+            const mediaUrl = item.url;
+            const media = (item.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+
+            template += `<figure>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
+
+            container.appendChild(template);
+          });
+        }
       }
     };
     xhttp.open('GET', url, true);
