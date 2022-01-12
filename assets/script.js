@@ -5,6 +5,8 @@
   let first = true;
   let template = '';
 
+  loadXMLDoc(urlOfTheDay,first);
+
   function loadXMLDoc(url,first) {
     const xhttp = new XMLHttpRequest();
 
@@ -31,7 +33,7 @@
         } else {
           template = '';
           const container2 = document.querySelector('#randomSeven');
-          
+
           result.forEach((item, i) => {
             const title = item.title;
             const explanation = item.explanation;
@@ -51,6 +53,4 @@
     xhttp.open('GET', url, true);
     xhttp.send();
   }
-
-  loadXMLDoc(urlOfTheDay,first);
 })()
