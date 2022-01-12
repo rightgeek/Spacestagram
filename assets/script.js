@@ -59,7 +59,7 @@ function loadXMLDoc(url) {
         const date = result.date;
         const mediaUrl = result.url;
         const media = (result.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
-        const firstClass = ` style="--of-the-day: 'Picture of your searched date (${date})';"`;
+        const firstClass = ` style="--of-the-day: 'Picture of your date &#65293; ${date}';"`;
 
         template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
 
