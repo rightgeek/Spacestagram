@@ -12,6 +12,7 @@
     event.preventDefault();
     const urlOfDate = `https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&date=${document.querySelector('#date').value}`;
     search = true;
+    first = false;
     loadXMLDoc(urlOfDate);
   }
 
@@ -56,6 +57,7 @@
             }
           });
         } else if (search) {
+          search = false;
           template = '';
           const container3 = document.querySelector('#firstClass');
 
