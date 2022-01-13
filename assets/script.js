@@ -69,7 +69,7 @@ function loadXMLDoc(url) {
           document.querySelector('#randomSeven').style.display = 'none';
         },300);
       }
-    } else (this.status === 400) {
+    } else if (this.status === 400) {
       document.querySelector('.errorMessage').style.display = 'block';
     }
   };
