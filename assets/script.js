@@ -64,6 +64,10 @@ function loadXMLDoc(url) {
         template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
 
         container3.innerHTML = template;
+        document.querySelector('#randomSeven').style.opacity = 0;
+        setTimeout(function(){
+          document.querySelector('#randomSeven').style.display = 'none';
+        },300);
       }
     }
   };

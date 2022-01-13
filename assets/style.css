@@ -116,6 +116,7 @@ figure:first-of-type::before {
   margin-top: 2rem;
   padding-top: 3.5rem;
   position: relative;
+  transition: opacity 300ms ease-in
 }
 #randomSeven::before {
   content: 'Random days & their pictures';
