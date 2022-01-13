@@ -3,7 +3,7 @@ body {
   font: 400 100%/1.5 'Helvetica Neue',Arial,sans-serif;
 }
 #container {
-  border: thin solid #272525;
+  border: thin solid rgba(39, 37, 37, 0.5);
   max-width: 70ch;
   padding: 2ch;
   margin: auto;
