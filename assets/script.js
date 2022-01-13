@@ -69,6 +69,8 @@ function loadXMLDoc(url) {
           document.querySelector('#randomSeven').style.display = 'none';
         },300);
       }
+    } else {
+      document.querySelector('.errorMessage').style.display = 'block';
     }
   };
   xhttp.open('GET', url, true);

@@ -166,3 +166,8 @@ form {
   text-align: right;
   margin-top: 1rem;
 }
+.errorMessage {
+  display: none;
+  text-align: center;
+  color: red;
+}
