@@ -14,6 +14,7 @@ function loadXMLDoc(url) {
 
   xhttp.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
+      document.querySelector('.errorMessage').style.display = 'none';
       let result = JSON.parse(this.response);
 
       if (first) {
