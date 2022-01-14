@@ -4,7 +4,7 @@ body {
   background: rgb(248, 249, 250);
   margin: 0;
 }
-#container {
+.container {
   border: thin solid rgba(39, 37, 37, 0.1);
   max-width: 70ch;
   padding: 2ch;
@@ -12,7 +12,7 @@ body {
   background: #f2fbff;
 }
 @media screen and (max-width: 759px) {
-  #container {
+  .container {
     padding: 4ch;
     max-width: unset;
   }
