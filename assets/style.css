@@ -7,7 +7,7 @@ body {
   max-width: 70ch;
   padding: 2ch;
   margin: auto;
-  background: #fff;
+  background: #f2fbff;
 }
 @media screen and (max-width: 759px) {
   max-width: unset;
@@ -49,7 +49,7 @@ body {
   100%{transform:rotate(270deg)}
 }
 #header {
-  background: #ccc;
+  /* background: #ccc; */
   padding: 20px;
 }
 #header h1 {
@@ -92,6 +92,7 @@ body {
 figure {
   margin: 0;
   box-shadow: 0 1px 3px 0px rgb(25 25 25 / 10%);
+  background: #fff;
 }
 figure:first-of-type {
   padding-top: 2.5rem;
