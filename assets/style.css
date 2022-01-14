@@ -6,15 +6,14 @@ body {
 }
 .container {
   border: thin solid rgba(39, 37, 37, 0.1);
-  max-width: 70vw;
-  padding: 2rem;
+  padding: 1.5rem;
   margin: auto;
   background: #f2fbff;
 }
-@media screen and (max-width: 759px) {
+@media screen and (min-width: 990px) {
   .container {
-    /* padding: 4ch; */
-    max-width: unset;
+    padding: 3rem;
+    max-width: 60vw;
   }
 }
 .loading-overlay__spinner {
