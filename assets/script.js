@@ -22,7 +22,7 @@ function loadXMLDoc(url) {
         const explanation = result.explanation;
         const date = result.date;
         const mediaUrl = result.url;
-        const media = (result.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+        const media = (result.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
         const firstClass = ` style="--of-the-day: 'Picture of the day (${date})';"`;
 
         template += `<div id="firstClass"><figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure></div><div id="randomSeven"></div>`;
@@ -59,7 +59,7 @@ function loadXMLDoc(url) {
         const explanation = result.explanation;
         const date = result.date;
         const mediaUrl = result.url;
-        const media = (result.media_type === 'video') ? `<iframe src="${mediaUrl}" alt="${title}" type="text/html"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+        const media = (result.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
         const firstClass = ` style="--of-the-day: 'Picture of your date &#65293; ${date}';"`;
 
         template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p></figcaption></figure>`;
