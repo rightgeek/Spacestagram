@@ -9,8 +9,8 @@ body {
   margin: auto;
   background: #fff;
 }
-@media (max-width: 759px) {
-  max-width: 85ch;
+@media screen and (max-width: 759px) {
+  max-width: unset;
 }
 .loading-overlay__spinner {
   width: 1.8rem;
