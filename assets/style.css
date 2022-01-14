@@ -13,7 +13,7 @@ body {
 @media screen and (min-width: 990px) {
   .container {
     padding: 3rem;
-    max-width: 60vw;
+    max-width: 70ch;
   }
 }
 .loading-overlay__spinner {
