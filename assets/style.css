@@ -1,6 +1,9 @@
 body {
   color: #444545;
-  font: 400 16px/1.5 'Helvetica Neue',Arial,sans-serif;
+  font-family: 'Helvetica Neue',Arial,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
   background: rgb(248, 249, 250);
   margin: 0;
 }
