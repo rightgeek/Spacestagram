@@ -7,13 +7,13 @@ body {
 .container {
   border: thin solid rgba(39, 37, 37, 0.1);
   max-width: 70vw;
-  padding: 2ch;
+  padding: 2rem;
   margin: auto;
   background: #f2fbff;
 }
 @media screen and (max-width: 759px) {
   .container {
-    padding: 4ch;
+    /* padding: 4ch; */
     max-width: unset;
   }
 }
