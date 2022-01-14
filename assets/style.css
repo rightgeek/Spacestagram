@@ -6,7 +6,7 @@ body {
 }
 .container {
   border: thin solid rgba(39, 37, 37, 0.1);
-  max-width: 70ch;
+  max-width: 70vw;
   padding: 2ch;
   margin: auto;
   background: #f2fbff;
