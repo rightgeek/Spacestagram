@@ -152,7 +152,7 @@ iframe {
   max-width: 100%;
 }
 #footer {
-  background: #ccc;
+  /* background: #ccc; */
   text-align: right;
   padding: .5rem 1.5rem;
   height: 1%;
