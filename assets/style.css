@@ -121,7 +121,7 @@ figure:first-of-type::before {
   top: 0;
   left: 0;
   height: 2.5rem;
-  font-size: .85rem;
+  font-size: .9rem;
   right: 0;
   background: #333333;
   color: #fff;
@@ -142,7 +142,7 @@ figure:first-of-type::before {
   top: 0;
   left: 0;
   height: 2.5rem;
-  font-size: .85rem;
+  font-size: .9rem;
   right: 0;
   background: #333333;
   color: #fff;
@@ -173,7 +173,7 @@ iframe {
   text-align: right;
   padding: 1rem 2rem;
   height: 1%;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 div.xyexample {
   margin-left: 25px;
@@ -188,6 +188,6 @@ form {
   display: none;
   text-align: center;
   color: red;
-  font-size: .8rem;
+  font-size: .9rem;
   margin-bottom: 0;
 }
