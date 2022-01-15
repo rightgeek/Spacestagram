@@ -28,7 +28,6 @@ function loadXMLDoc(url) {
         template += `<div id="firstClass"><figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love"></i><span>liked!</span></div></figcaption></figure></div><div id="randomSeven"></div>`;
 
         container.innerHTML = template;
-        likeImage();
         first = false;
 
         if (!first) {
