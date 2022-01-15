@@ -89,7 +89,7 @@ function likeImage () {
     const thisIndex = favorites.indexOf(thisId);
 
     if (!thisIndex == -1) {
-      i.classList.add('press')
+      i.classList.add('press');
     }
 
     i.addEventListener('click', function(e) {
