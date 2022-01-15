@@ -239,7 +239,7 @@ form {
   position: absolute;
   border-color: transparent;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   top: 2px;
   right: 0;
 }
@@ -255,6 +255,9 @@ form {
   font-family: fontawesome;
   content: '\f004';
   font-style: normal;
+}
+.favorites::before {
+  content: '\f08a';
 }
 .love + span {
   position: absolute;
