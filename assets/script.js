@@ -67,6 +67,7 @@ function loadXMLDoc(url) {
 
         container3.innerHTML = template;
         likeImage();
+        
         document.querySelector('#randomSeven').style.opacity = 0;
         setTimeout(function(){
           document.querySelector('#randomSeven').style.display = 'none';
