@@ -81,7 +81,7 @@ function loadXMLDoc(url) {
 }
 
 function likeImage () {
-  document.querySelectorAll( ".love" ).forEach(function(i) {
+  document.querySelectorAll( '.love' ).forEach(function(i) {
     i.addEventListener('click', function() {
       for (let sibling of this.parentNode.children) {
         sibling.classList.toggle('press');
