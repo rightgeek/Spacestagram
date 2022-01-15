@@ -88,7 +88,7 @@ body {
 }
 .h1 {
   text-decoration: none;
-  display: block;  
+  display: block;
 }
 #navigation li a {
   display: block;
@@ -213,24 +213,26 @@ form {
   margin-bottom: 0;
 }
 .loveWrapper {
-  height:100px;
+  height:38px;
   margin:0 auto;
   position: relative;
 }
 .love {
   cursor:pointer;
-  padding:10px 12px 8px;
+  padding:10px;
   background:#fff;
   border-radius:50%;
+  border: 1px solid rgba(68, 69, 69, 0.1);
   display:inline-block;
-  margin:0 0 15px;
-  color:#aaa;
+  margin:0;
+  color: rgba(68, 69, 69, 0.5);
   transition:.2s;
+  line-height: 1;
 }
 .love:hover {
-  color:#666;
+  color: rgb(68, 69, 69);
 }
-.love:before {
+.love::before {
   font-family:fontawesome;
   content:'\f004';
   font-style:normal;
@@ -249,12 +251,15 @@ form {
 }
 .love.press {
   animation: size .4s;
-  color:#e23b3b;
+  color: #e23b3b;
+}
+.love.press::before {
+  animation: size2 .4s;
 }
 span.press {
-  bottom:120px;
-  font-size:14px;
-  visibility:visible;
+  bottom: 50px;
+  font-size: 1rem;
+  visibility: visible;
   animation: fade 1s;
 }
 @keyframes fade {
@@ -263,8 +268,12 @@ span.press {
   100% {color:#transparent;}
 }
 @keyframes size {
-  0% {padding:10px 12px 8px;}
-  50% {padding:14px 16px 12px;
-    margin-top:-4px;}
-  100% {padding:10px 12px 8px;}
+  0% {padding:10px;}
+  50% {padding:9px;margin-top:-4px;}
+  100% {padding:10px;}
+}
+@keyframes size2 {
+  0% {font-size:16px;}
+  50% {font-size:18px;}
+  100% {font-size:16px;}
 }
