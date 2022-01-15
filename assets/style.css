@@ -214,14 +214,14 @@ form {
 }
 .loveWrapper {
   height:38px;
-  margin:0 auto;
+  margin: 20px auto 0;
   position: relative;
 }
 .love {
   cursor: pointer;
   height: 36px;
   width: 36px;
-  background: #fff;
+  background: transparent;
   border-radius: 50%;
   border: 1px solid rgba(68, 69, 69, 0.1);
   display: inline-block;
@@ -263,15 +263,15 @@ form {
   animation: size2 .4s;
 }
 span.press {
-  bottom: 50px;
+  bottom: 40px;
   font-size: 1rem;
   visibility: visible;
   animation: fade 1s;
 }
 @keyframes fade {
-  0% {color:#transparent;}
+  0% {color: transparent;}
   50% {color:#e23b3b;}
-  100% {color:#transparent;}
+  100% {color: transparent;}
 }
 @keyframes size {
   0% {padding:10px;}
