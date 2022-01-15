@@ -99,7 +99,10 @@ body {
 }
 #content h4 {
   color: #191919;
-  margin: 0.5rem 0;
+  margin: .5rem 0 1rem;
+}
+p {
+  margin: 0 0 .5rem
 }
 figure {
   margin: 0;
