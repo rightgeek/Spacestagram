@@ -132,7 +132,7 @@ figure:first-of-type::before {
 }
 #randomSeven {
   margin-top: 2rem;
-  padding-top: 3.5rem;
+  padding-top: 4.5rem;
   position: relative;
   transition: opacity .3s ease-in
 }
@@ -141,7 +141,7 @@ figure:first-of-type::before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 2.5rem;
+  height: 3rem;
   font-size: .9rem;
   right: 0;
   background: #333333;
