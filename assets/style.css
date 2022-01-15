@@ -68,7 +68,7 @@ body {
 #header {
   padding: 20px;
 }
-#header h1 {
+#header .h1 {
   margin: 0;
   color: #191919;
   font-size: 2rem;
@@ -85,6 +85,10 @@ body {
 #navigation ul li {
   list-style-type: none;
   display: inline;
+}
+.h1 {
+  text-decoration: none;
+  display: block;  
 }
 #navigation li a {
   display: block;
