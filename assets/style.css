@@ -219,7 +219,8 @@ form {
 }
 .love {
   cursor:pointer;
-  padding:10px;
+  height: 36px;
+  width: 36px;
   background:#fff;
   border-radius:50%;
   border: 1px solid rgba(68, 69, 69, 0.1);
@@ -228,14 +229,19 @@ form {
   color: rgba(68, 69, 69, 0.5);
   transition:.2s;
   line-height: 1;
+  position: relative;
 }
 .love:hover {
   color: rgb(68, 69, 69);
 }
 .love::before {
-  font-family:fontawesome;
-  content:'\f004';
-  font-style:normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: fontawesome;
+  content: '\f004';
+  font-style: normal;
 }
 .love + span {
   position: absolute;
@@ -250,7 +256,7 @@ form {
   font-weight:400;
 }
 .love.press {
-  animation: size .4s;
+  /* animation: size .4s; */
   color: #e23b3b;
 }
 .love.press::before {
