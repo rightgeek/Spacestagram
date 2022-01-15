@@ -218,16 +218,16 @@ form {
   position: relative;
 }
 .love {
-  cursor:pointer;
+  cursor: context-menupointer;
   height: 36px;
   width: 36px;
-  background:#fff;
-  border-radius:50%;
+  background: #fff;
+  border-radius: 50%;
   border: 1px solid rgba(68, 69, 69, 0.1);
-  display:inline-block;
-  margin:0;
+  display: inline-block;
+  margin: 0;
   color: rgba(68, 69, 69, 0.5);
-  transition:.2s;
+  transition: .2s;
   line-height: 1;
   position: relative;
 }
