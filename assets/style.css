@@ -218,7 +218,7 @@ form {
   position: relative;
 }
 .love {
-  cursor: context-menupointer;
+  cursor: pointer;
   height: 36px;
   width: 36px;
   background: #fff;
