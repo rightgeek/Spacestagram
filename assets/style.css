@@ -177,7 +177,7 @@ iframe {
   display: inline;
   border: 1px solid;
   /* border-radius: 100px; */
-  padding: 10px 15px;
+  padding: 5px 10px;
   transition: background-color 0.5 ease-in-out;
 }
 .pseudo-input input {
