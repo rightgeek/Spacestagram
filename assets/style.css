@@ -172,6 +172,26 @@ iframe {
   height: 1%;
   font-size: .9rem;
 }
+.pseudo-input {
+  display: inline;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  padding: 10px 15px;
+  transition: background-color 0.5 ease-in-out;
+}
+.pseudo-input input {
+  border: 0;
+  background-color: transparent;
+  width: 200px;
+}
+.pseudo-input input:focus {
+  outline: none;
+}
+.pseudo-input button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 div.xyexample {
   margin-left: 25px;
   font-family: monospace;

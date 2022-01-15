@@ -17,15 +17,12 @@
         <h1>Spacestagram</h1>
         <p style="margin:0;">Images from the final frontier</p>
       </header>
-      <!-- <nav id="navigation">
-        <ul>
-          <li><a>Images from the final frontier</a></li>
-        </ul>
-      </nav> -->
       <form onsubmit="seachImage()">
-      <label for="date">Search a date:</label>
-      <input type="date" id="date" name="date">
-      <input type="submit" value="Submit">
+        <label for="date">Search a date:</label>
+        <div class="pseudo-input">
+          <input type="date" id="date" name="date">
+          <<button type="submit" class="fa fa-search"></button>
+        </div>
       </form>
       <p class="errorMessage">Date not found.</p>
       <main>
