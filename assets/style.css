@@ -215,6 +215,7 @@ form {
   height:38px;
   margin: 20px auto;
   position: relative;
+  display: inline-block;
 }
 .love {
   cursor: pointer;
@@ -246,8 +247,8 @@ form {
 .love + span {
   position: absolute;
   bottom:0;
-  left:0;
-  right:0;
+  left: 50%;
+  transform: translateX(-50%);
   visibility: hidden;
   transition:.6s;
   z-index:0;
@@ -264,7 +265,7 @@ form {
 }
 span.press {
   bottom: 40px;
-  font-size: 1rem;
+  font-size: .8rem;
   visibility: visible;
   animation: fade 1s;
 }
