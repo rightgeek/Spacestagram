@@ -217,7 +217,8 @@ form {
   position: relative;
   display: inline-block;
 }
-.love {
+.love,
+.favorites {
   cursor: pointer;
   height: 36px;
   width: 36px;
@@ -232,10 +233,14 @@ form {
   line-height: 1;
   position: relative;
 }
+.favorites {
+  border-color: transparent;
+}
 .love:hover {
   color: rgb(68, 69, 69);
 }
-.love::before {
+.love::before,
+.favorites::before {
   position: absolute;
   top: 50%;
   left: 50%;
