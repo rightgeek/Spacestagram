@@ -26,7 +26,7 @@ function loadXMLDoc(url) {
         const media = (result.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
         const firstClass = ` style="--of-the-day: 'Picture of the day (${date})';"`;
 
-        template += `<div id="firstClass"><figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}"></i><span>liked!</span></div></figcaption></figure></div><div id="randomSeven"></div>`;
+        template += `<div id="firstClass"><figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure></div><div id="randomSeven"></div>`;
 
         container.innerHTML = template;
         first = false;
@@ -45,7 +45,7 @@ function loadXMLDoc(url) {
           const mediaUrl = item.url;
           const media = (item.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
 
-          template += `<figure>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}"></i><span>liked!</span></div></figcaption></figure>`;
+          template += `<figure>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
 
           if (i == 6) {
             container2.innerHTML = template;
@@ -64,7 +64,7 @@ function loadXMLDoc(url) {
         const media = (result.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
         const firstClass = ` style="--of-the-day: 'Picture of your date &#65293; ${date}';"`;
 
-        template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}"></i><span>liked!</span></div></figcaption></figure>`;
+        template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
 
         container3.innerHTML = template;
         likeImage();
