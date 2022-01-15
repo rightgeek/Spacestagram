@@ -112,7 +112,7 @@ figure {
   background: #fff;
 }
 figure:first-of-type {
-  padding-top: 2.5rem;
+  padding-top: 3rem;
   position: relative;
 }
 figure:first-of-type::before {
@@ -120,8 +120,8 @@ figure:first-of-type::before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 2.5rem;
-  font-size: .9rem;
+  height: 3rem;
+  font-size: 1rem;
   right: 0;
   background: #333333;
   color: #fff;
