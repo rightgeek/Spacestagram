@@ -84,6 +84,14 @@ function loadXMLDoc(url) {
 
 function likeImage () {
   document.querySelectorAll( '.love' ).forEach(function(i) {
+
+    const thisId = i.getAttribute('id');
+    const thisIndex = favorites.indexOf(thisId);
+
+    if (!thisIndex == -1) {
+      i.classList.add('press')
+    }
+
     i.addEventListener('click', function(e) {
       for (let sibling of this.parentNode.children) {
         sibling.classList.toggle('press');
