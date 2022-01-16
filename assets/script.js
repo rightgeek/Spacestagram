@@ -103,13 +103,13 @@ function likeImage() {
         sibling.classList.toggle('press');
       }
 
-      const like = JSON.stringify({
+      const like = {
         id: this.dataset.id,
         title: this.dataset.title,
         media: this.dataset.media,
         type: this.dataset.type,
         explanation: this.dataset.explanation
-      });
+      };
 
       // const index = favorites.indexOf(id);
 
