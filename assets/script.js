@@ -105,7 +105,7 @@ function likeImage() {
       }
 
       const like = {
-        id: this.dataset.id,
+        id: this.getAttribute('id'),
         title: this.dataset.title,
         media: this.dataset.media,
         type: this.dataset.type,
