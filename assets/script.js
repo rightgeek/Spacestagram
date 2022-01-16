@@ -126,6 +126,8 @@ function likeImage() {
       }
 
       localStorage.setItem('favorites', JSON.stringify(favorites));
+      document.querySelector('.favorites').removeAttribute('style');
+      document.querySelector('.favorites').setAttribute("style",`--data-count: '${favorites.length}';`);
     })
   });
 }
