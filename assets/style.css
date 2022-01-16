@@ -65,45 +65,45 @@ body {
   0%{transform:rotate(0deg)}
   100%{transform:rotate(270deg)}
 }
-#header {
+.header {
   padding: 0 0 20px;
   position: relative;
 }
-#header .h1 {
+.header .h1 {
   margin: 0;
   color: #191919;
   font-size: 2rem;
   line-height: 1;
 }
-#navigation {
+.navigation {
   float: left;
   width: 100%;
   background: #333;
 }
-#navigation ul {
+.navigation ul {
   margin: 0;
   padding: 0;
 }
-#navigation ul li {
+.navigation ul li {
   list-style-type: none;
   display: inline;
 }
 .h1 {
   text-decoration: none;
 }
-#navigation li a {
+.navigation li a {
   display: block;
   float: left;
   padding: 5px 10px;
   color: #ffffff;
   text-decoration: none;
 }
-#content {
+.content {
   clear: left;
   padding: 2rem 0;
   min-height: 70vh;
 }
-#content h4 {
+.content h4 {
   color: #191919;
   margin: 0 0 .5rem;
 }
@@ -132,13 +132,13 @@ figure:first-of-type::before {
   justify-content: center;
   text-transform: uppercase;
 }
-#randomSeven {
+.randomSeven {
   margin-top: 2rem;
   padding-top: 4.5rem;
   position: relative;
   transition: opacity .3s ease-in
 }
-#randomSeven::before {
+.randomSeven::before {
   content: 'Random days & their pictures';
   position: absolute;
   top: 0;
@@ -153,10 +153,10 @@ figure:first-of-type::before {
   justify-content: center;
   text-transform: uppercase;
 }
-#randomSeven figure:first-of-type {
+.randomSeven figure:first-of-type {
   padding-top: 0;
 }
-#randomSeven figure:first-of-type::before {
+.randomSeven figure:first-of-type::before {
   content: unset;
 }
 figcaption {
@@ -175,7 +175,7 @@ iframe {
   display: block;
   box-shadow: 0 -1px 3px 0px rgb(25 25 25 / 10%);
 }
-#footer {
+.footer {
   text-align: right;
   padding: 1rem 2rem;
   height: 1%;
