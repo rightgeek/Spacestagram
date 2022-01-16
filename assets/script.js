@@ -7,6 +7,7 @@ let search = false;
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 (function(){
+  document.querySelector('.favorites').setAttribute("style",`--data-count: '${favorites.length}';`);
   loadXMLDoc(urlOfTheDay);
 })()
 
