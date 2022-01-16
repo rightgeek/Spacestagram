@@ -139,12 +139,13 @@ function likeImage() {
 }
 
 function anyLikes() {
-  document.querySelector('.favorites').setAttribute("style",`--data-count: '${favorites.length}';`);
+  const likes =  document.querySelector('.favorites');
+  likes.setAttribute("style",`--data-count: '${favorites.length}';`);
 
   if (favorites.length > 0) {
-    document.querySelector('.favorites').classList.remove('empty');
+    likes.classList.remove('empty');
   } else {
-    document.querySelector('.favorites').classList.add('empty');
+    likes.classList.add('empty');
   }
 }
 
