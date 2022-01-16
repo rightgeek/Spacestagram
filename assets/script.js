@@ -104,6 +104,9 @@ function anyLikes() {
 
 function renderLikes() {
   if (favorites.length > 0) {
+
+    container.innerHTML = '<div class="loading-overlay__spinner"><svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div>';
+
     template = '';
     let num = 1;
 
@@ -119,10 +122,12 @@ function renderLikes() {
       num += i;
       template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love press" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
 
-      if (num == favorites.length) {
-        container.innerHTML = template;
-        likeImage();
-      }
+      setTimeout(function(){
+        if (num == favorites.length) {
+          container.innerHTML = template;
+          likeImage();
+        }
+      }, 3000);
     });
 
   } else {
