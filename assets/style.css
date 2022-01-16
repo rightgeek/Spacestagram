@@ -10,7 +10,7 @@ body {
   color: #444545;
   background: rgb(248, 249, 250);
   margin: 0;
-  font-size: var(--font-size-base);
+  font-size: 16px;
   letter-spacing: 0;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
@@ -112,8 +112,6 @@ p {
 }
 figure {
   margin: 0;
-  /* box-shadow: 0 1px 3px 0px rgb(25 25 25 / 10%);
-  background: #fff; */
 }
 figure:first-of-type {
   padding-top: 4.5rem;
@@ -186,7 +184,6 @@ iframe {
 .pseudo-input {
   display: inline;
   border: 1px solid;
-  /* border-radius: 100px; */
   padding: 5px 10px;
   transition: background-color 0.5 ease-in-out;
 }
@@ -209,7 +206,6 @@ div.xyexample {
 }
 form {
   text-align: right;
-  /* margin-top: 1rem; */
 }
 .errorMessage {
   display: none;
@@ -298,7 +294,6 @@ form {
   font-weight:400;
 }
 .love.press {
-  /* animation: size .4s; */
   color: #e23b3b;
 }
 .love.press::before {
@@ -314,11 +309,6 @@ span.press {
   0% {color: transparent;}
   50% {color:#e23b3b;}
   100% {color: transparent;}
-}
-@keyframes size {
-  0% {padding:10px;}
-  50% {padding:9px;margin-top:-4px;}
-  100% {padding:10px;}
 }
 @keyframes size2 {
   0% {font-size:16px;}
