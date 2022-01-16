@@ -119,7 +119,7 @@ function renderLikes() {
       const media = (mediaType === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
       const firstClass = (i == 0) ? ` style="--of-the-day: 'Your likes';"` : '';
 
-      template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love press" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
+      template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love press" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span class="press">liked!</span></div></figcaption></figure>`;
 
       if (num == favorites.length) {
         setTimeout(function(){
