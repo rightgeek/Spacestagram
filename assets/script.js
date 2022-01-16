@@ -134,9 +134,8 @@ function renderLikes() {
   if (favorites.length > 0) {
 
     favorites.forEach((item, i) => {
-      const itemUrl = `https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&date=${item}`;
-    });
 
+    });
 
   } else {
     return;
