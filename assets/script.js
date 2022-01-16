@@ -117,7 +117,7 @@ function renderLikes() {
       const firstClass = (i == 0) ? ` style="--of-the-day: 'Your likes';"` : '';
 
       num += i;
-      template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
+      template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love press" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
 
       if (num == favorites.length) {
         container.innerHTML = template;
