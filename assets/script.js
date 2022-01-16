@@ -150,8 +150,6 @@ function anyLikes() {
 }
 
 function renderLikes(event) {
-  event.preventDefault;
-
   if (favorites.length > 0) {
     template = '';
 
