@@ -92,7 +92,6 @@ function likeImage() {
     const thisId = like.getAttribute('id');
     // const thisIndex = favorites.indexOf(thisId);
     const thisIndex = favorites.findIndex(function (favorite) {
-      console.log(favorite.id,thisId);
       return favorite.id === thisId;
     });
 
@@ -134,7 +133,9 @@ function likeImage() {
   });
 }
 
-function renderLikes() {
+function renderLikes(event) {
+  event.preventDefault;
+  
   if (favorites.length > 0) {
     template = '';
 
