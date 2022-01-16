@@ -141,7 +141,7 @@ figure:first-of-type::before {
   transition: opacity .3s ease-in
 }
 .randomSeven::before {
-  content: 'Random days & their pictures';
+  content: 'Random days & their media';
   position: absolute;
   top: 0;
   left: 0;
