@@ -127,7 +127,7 @@ function renderLikes() {
           container.innerHTML = template;
           likeImage();
         }
-      }, 3000);
+      }, 2000);
     });
 
   } else {
