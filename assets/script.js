@@ -92,10 +92,11 @@ function likeImage() {
     const thisId = like.getAttribute('id');
     // const thisIndex = favorites.indexOf(thisId);
     const thisIndex = favorites.findIndex(function (favorite) {
+      console.log(favorite.id,thisId);
       return favorite.id === thisId;
     });
 
-    if (!thisIndex == -1) {
+    if (thisIndex >= 0) {
       like.classList.add('press');
     }
 
