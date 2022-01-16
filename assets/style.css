@@ -105,18 +105,18 @@ body {
 }
 #content h4 {
   color: #191919;
-  margin: .5rem 0;
+  margin: 0 0 .5rem;
 }
 p {
   margin: 0 0 .5rem
 }
 figure {
   margin: 0;
-  box-shadow: 0 1px 3px 0px rgb(25 25 25 / 10%);
-  background: #fff;
+  /* box-shadow: 0 1px 3px 0px rgb(25 25 25 / 10%);
+  background: #fff; */
 }
 figure:first-of-type {
-  padding-top: 3rem;
+  padding-top: 4.5rem;
   position: relative;
 }
 figure:first-of-type::before {
@@ -162,7 +162,10 @@ figure:first-of-type::before {
   content: unset;
 }
 figcaption {
-  padding: 0 1.5rem 1rem;
+  padding: 1rem 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 1px 0px rgb(25 25 25 / 10%);
+  background: #fff;
 }
 figure + * {
   margin-top: 1.5rem;
@@ -171,6 +174,8 @@ img,
 iframe {
   width: 100%;
   max-width: 100%;
+  display: block;
+  box-shadow: 0 -1px 3px 0px rgb(25 25 25 / 10%);
 }
 #footer {
   text-align: right;
@@ -215,7 +220,7 @@ form {
 }
 .loveWrapper {
   height:38px;
-  margin: 20px auto;
+  margin: 20px auto 10px;
   position: relative;
   display: inline-block;
 }
