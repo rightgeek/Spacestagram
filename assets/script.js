@@ -23,10 +23,11 @@ function loadXMLDoc(url) {
         const explanation = result.explanation;
         const date = result.date;
         const mediaUrl = result.url;
-        const media = (result.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+        const mediaType = result.media_type;
+        const media = (mediaType === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
         const firstClass = ` style="--of-the-day: 'Picture of the day (${date})';"`;
 
-        template += `<div id="firstClass"><figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure></div><div id="randomSeven"></div>`;
+        template += `<div id="firstClass"><figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure></div><div id="randomSeven"></div>`;
 
         container.innerHTML = template;
         first = false;
@@ -43,9 +44,10 @@ function loadXMLDoc(url) {
           const explanation = item.explanation;
           const date = item.date;
           const mediaUrl = item.url;
-          const media = (item.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+          const mediaType = item.media_type;
+          const media = (mediaType === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
 
-          template += `<figure>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
+          template += `<figure>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
 
           if (i == 6) {
             container2.innerHTML = template;
@@ -61,10 +63,11 @@ function loadXMLDoc(url) {
         const explanation = result.explanation;
         const date = result.date;
         const mediaUrl = result.url;
-        const media = (result.media_type === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
+        const mediaType = result.media_type;
+        const media = (mediaType === 'video') ? `<iframe id="ytplayer" type="text/html" width="640" height="360" src="${mediaUrl}" frameborder="0" alt="${title}"></iframe>` : `<img src="${mediaUrl}" alt="${title}">`;
         const firstClass = ` style="--of-the-day: 'Picture of your date &#65293; ${date}';"`;
 
-        template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
+        template += `<figure${firstClass}>${media}<figcaption><h4>${date} &#65293; ${title}</h4><p>${explanation}</p><div class="loveWrapper"><i class="love" id="${date}" data-media="${mediaUrl}" data-type="${mediaType}" data-title="${title}" data-explanation="${explanation}" title="Add to likes"></i><span>liked!</span></div></figcaption></figure>`;
 
         container3.innerHTML = template;
         likeImage();
@@ -82,28 +85,42 @@ function loadXMLDoc(url) {
   xhttp.send();
 }
 
-function likeImage () {
-  document.querySelectorAll( '.love' ).forEach(function(i) {
+function likeImage() {
+  document.querySelectorAll( '.love' ).forEach((like, i) => {
 
-    const thisId = i.getAttribute('id');
-    const thisIndex = favorites.indexOf(thisId);
+    const thisId = like.getAttribute('id');
+    // const thisIndex = favorites.indexOf(thisId);
+    const thisIndex = favorites.findIndex(function (favorite) {
+      return favorite.id === thisId;
+    });
 
     if (!thisIndex == -1) {
-      i.classList.add('press');
+      like.classList.add('press');
     }
 
-    i.addEventListener('click', function(e) {
+    like.addEventListener('click', function(e) {
       for (let sibling of this.parentNode.children) {
         sibling.classList.toggle('press');
       }
 
-      const id = e.target.id;
-      const index = favorites.indexOf(id);
+      const like = JSON.stringify({
+        id: this.dataset.id,
+        title: this.dataset.title,
+        media: this.dataset.media,
+        type: this.dataset.type,
+        explanation: this.dataset.explanation
+      });
 
-      if (!id) return;
+      // const index = favorites.indexOf(id);
+
+      const index = favorites.findIndex(function (favorite) {
+        return favorite.id === like.id;
+      });
+
+      if (!like) return;
 
       if (index == -1) {
-        favorites.push(id);
+        favorites.push(like);
       } else {
         favorites.splice(index, 1);
       }
@@ -113,7 +130,20 @@ function likeImage () {
   });
 }
 
-function seachImage () {
+function renderLikes() {
+  if (favorites.length > 0) {
+
+    favorites.forEach((item, i) => {
+      const itemUrl = `https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&date=${item}`;
+    });
+
+
+  } else {
+    return;
+  }
+}
+
+function seachImage() {
   event.preventDefault();
   const urlOfDate = `https://api.nasa.gov/planetary/apod?api_key=5mEjGP3nC3nhRVgEUPXuqhQxeyokBFZ0eGVSXc5S&date=${document.querySelector('#date').value}`;
   search = true;
