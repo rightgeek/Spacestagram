@@ -149,7 +149,7 @@ function anyLikes() {
   }
 }
 
-function renderLikes(event) {
+function renderLikes() {
   if (favorites.length > 0) {
     template = '';
 
