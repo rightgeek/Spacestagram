@@ -110,7 +110,7 @@ body {
 }
 p {
   margin: 0 0 .5rem;
-  font: inherit;
+  /* font: inherit; */
 }
 figure {
   margin: 0;
