@@ -163,7 +163,7 @@ figure:first-of-type::before {
 }
 figcaption {
   padding: 1rem 1.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0 1px 1px 0px rgb(25 25 25 / 10%);
   background: #fff;
 }
