@@ -259,6 +259,9 @@ form {
 .favorites::before {
   content: '\f08a';
 }
+.favorites:not(.empty) {
+  color: #e23b3b;
+}
 .favorites::after {
   content: var(--data-count);
   font-size: 0.8rem;
