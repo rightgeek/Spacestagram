@@ -125,7 +125,7 @@ function renderLikes() {
         setTimeout(function(){
           container.innerHTML = template;
           likeImage();
-        }, 2000);
+        }, 1500);
       }
 
       num++;
