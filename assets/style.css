@@ -10,7 +10,7 @@ body {
   color: #444545;
   background: rgb(248, 249, 250);
   margin: 0;
-  line-height: .8;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
