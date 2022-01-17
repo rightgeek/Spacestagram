@@ -126,7 +126,8 @@ figure:first-of-type::before {
   top: 0;
   left: 0;
   height: 3rem;
-  font-size: 1rem;
+  font-size: .9rem;
+  font-weight: 500;
   right: 0;
   background: #333333;
   color: #fff;
@@ -147,7 +148,8 @@ figure:first-of-type::before {
   top: 0;
   left: 0;
   height: 3rem;
-  font-size: 1rem;
+  font-size: .9rem;
+  font-weight: 500;
   right: 0;
   background: #333333;
   color: #fff;
