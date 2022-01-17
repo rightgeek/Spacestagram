@@ -194,6 +194,7 @@ iframe {
   border: 0;
   background-color: transparent;
   min-width: 100px;
+  color: inherit;
 }
 .pseudo-input input:focus {
   outline: none;
