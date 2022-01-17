@@ -193,6 +193,7 @@ iframe {
 .pseudo-input input {
   border: 0;
   background-color: transparent;
+  min-width: 140px;
 }
 .pseudo-input input:focus {
   outline: none;
@@ -201,6 +202,7 @@ iframe {
   border: none;
   background: none;
   cursor: pointer;
+  color: inherit;
 }
 div.xyexample {
   margin-left: 25px;
