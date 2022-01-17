@@ -105,6 +105,7 @@ function anyLikes() {
 function renderLikes() {
   if (favorites.length > 0) {
 
+    this.classList.add('active');
     container.innerHTML = '<div class="loading-overlay__spinner"><svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div>';
 
     template = '';
@@ -162,8 +163,6 @@ function likeImage() {
         explanation: this.dataset.explanation
       };
 
-      // const index = favorites.indexOf(id);
-
       const index = favorites.findIndex(function (favorite) {
         return favorite.id === like.id;
       });
@@ -177,10 +176,16 @@ function likeImage() {
       }
 
       localStorage.setItem('favorites', JSON.stringify(favorites));
-      // document.querySelector('.favorites').removeAttribute('style');
       anyLikes();
+      if (hasClass(document.querySelector('.favorites'), 'active')) {
+        renderLikes();
+      }
     })
   });
+}
+
+function hasClass(element, className) {
+  return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
 }
 
 function seachImage() {
