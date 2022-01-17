@@ -19,13 +19,13 @@ body {
 }
 .container {
   border: thin solid rgba(39, 37, 37, 0.1);
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   margin: auto;
   background: #f2fbff;
 }
 @media screen and (min-width: 990px) {
   .container {
-    padding: 3rem;
+    padding: 3rem 2rem;
     max-width: 70ch;
   }
 }
