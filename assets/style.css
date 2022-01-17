@@ -193,7 +193,7 @@ iframe {
 .pseudo-input input {
   border: 0;
   background-color: transparent;
-  min-width: 140px;
+  min-width: 100px;
 }
 .pseudo-input input:focus {
   outline: none;
